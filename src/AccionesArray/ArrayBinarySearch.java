@@ -2,7 +2,7 @@ package AccionesArray;
 
 import java.util.Arrays;
 
-public class AccionesArrayMain {
+public class ArrayBinarySearch {
     public static void main(String[] args) {
         int[] a = {10, 3, 12, 13, 5, 8, 7};
         //"Arrays.sort" ordena el array de menor a mayor

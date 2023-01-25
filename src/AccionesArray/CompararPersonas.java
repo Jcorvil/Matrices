@@ -1,4 +1,4 @@
-package CompararPersonas;
+package AccionesArray;
 
 public class CompararPersonas {
     public static void main(String[] args) {
