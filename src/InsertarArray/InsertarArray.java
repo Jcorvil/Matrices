@@ -5,31 +5,41 @@ import java.util.Arrays;
 public class InsertarArray {
     public static void main(String[] args) {
         int[] in = {7, 1, 5, 2};
+        int[] out = Arrays.copyOf(in, in.length + 1);
+        int pos = 2;
         int e = 8;
 
-        public static int[] inserta (int[] in, int e, int pos){
+        System.out.println("Antes de añadir el elemento: ");
+        System.out.println(Arrays.toString(out));
 
-            //Manualmente
-            int[] out = new int [in.length + 1];
-            for (int i = 0; i <= in.length; i++) {
-                out[i] = in[i];
-            }
-            out[pos] = e;
-            out[pos+1] = in[];
-
-
-
-            System.out.println(Arrays.toString(in));
-            System.out.println(Arrays.toString(out));
-
-            //Por método predefinido
-            out = Arrays.copyOf(in, in.length + 1);
-            out[3] = e;
-
-            System.out.println(Arrays.toString(in));
-            System.out.println(Arrays.toString(out));
-
+        for (int i = out.length - 1; i > pos; i--) {
+            out[i] = out[i - 1];
         }
+        out[pos] = e;
+
+        System.out.println("Tras añadir el elemento: ");
+        System.out.println(Arrays.toString(out));
 
     }
+
+
+
+    static int[] inserta(int[] in, int e, int pos) {
+
+        pos = 2;
+        e = 8;
+
+        System.out.println(Arrays.toString(in));
+
+        int[] out = new int[in.length + 1];
+        for (int i = in.length - 1; i > pos; i--) {
+            in[i] = in[i - 1];
+        }
+        in[pos] = e;
+        System.out.println(Arrays.toString(in));
+
+        return out;
+    }
+
+
 }
