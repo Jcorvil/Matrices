@@ -7,26 +7,60 @@ public class OperacionesConArrays {
     public static void main(String[] args) {
         //1.-Crea un array con 10 números aleatorios
         int [] a = new int [10];
+        int [] b = new int [10];
+        System.out.println("--Apartado 1");
         arrayRandom(a);
+        System.out.println(Arrays.toString(a));
 
         //2.-Imprime el array anterior empezando por la última posición
+        System.out.println("--Apartado 2");
+        arraUltimo(a);
 
         //3.-Ordena el array utilizando la clase de utilidades Arrays
+        System.out.println("--Apartado 3");
         Arrays.sort(a);
+        System.out.println("Array ordenado " + Arrays.toString(a));
+
         //4.-Busca un número recibido como parámetro dentro del array. Por dos métodos diferentes:
             //De manera manual
-        System.out.println(busquedaManual(a, 25));
+        System.out.println("--Apartado 4");
+        System.out.println("Manual: ");
+        System.out.println(busquedaManual(a, 20));
             //Usando la clase de utilidades Arrays
-        System.out.println(Arrays.binarySearch(a, 25));
+        System.out.println("Utilidades: ");
+        System.out.println(Arrays.binarySearch(a, 20));
+
+        //5.-Compara dos arrays recibidos por parámetros devolviendo si son iguales o no.
+        System.out.println("--Apartado 5");
+        System.out.println(Arrays.equals(a, b));
+
+        //6.-Realiza 4 copias del array en un nuevo array de 4 posiciones.
+        System.out.println("--Apartado 6");
 
     }
 
+
+
+
+    //Array aleatorio ejercicio 1
     public static int [] arrayRandom(int[]a){
         Random aleatorio1 = new Random();
         for (int i = 0; i < a.length; i++) {
             a[i] = (int) aleatorio1.nextInt(100);
         }
         return a;
+    }
+
+    //Imprime ultima posicion del array
+    public static void arraUltimo (int[]a){
+        System.out.print("[");
+        for (int i = a.length - 1; i >= 0; i--) {
+            System.out.print(a[i]);
+            if (i < a.length) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
     }
 
     //Busqueda manual ejercicio 4

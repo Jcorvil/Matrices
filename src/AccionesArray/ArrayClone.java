@@ -15,9 +15,10 @@ public class ArrayClone {
 
 
 
-        Persona p1 = new Persona("Persona 1");
-        Persona p2 = new Persona("Persona 2");
-        Persona p3 = new Persona("Persona 3");
+
+        Persona p1 = new Persona("Persona 1", 20);
+        Persona p2 = new Persona("Persona 2", 25);
+        Persona p3 = new Persona("Persona 3", 43);
 
         //Crear un array de 3 personas distintas e imprimirlo usando la clase Arrays.
         Persona [] personasA = {p1, p2, p3};
