@@ -46,7 +46,7 @@ public class OperacionesConArrays {
     public static int [] arrayRandom(int[]a){
         Random aleatorio1 = new Random();
         for (int i = 0; i < a.length; i++) {
-            a[i] = (int) aleatorio1.nextInt(100);
+            a[i] = aleatorio1.nextInt(100);
         }
         return a;
     }
