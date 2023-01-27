@@ -1,9 +1,14 @@
-package InsertarArray;
+package InsertarElementosArray;
 
 import java.util.Arrays;
 
 public class InsertarArray {
     public static void main(String[] args) {
+        System.out.println(Arrays.toString(annadirAlArray()));
+
+    }
+
+    public static int[] annadirAlArray(){
         int[] in = {7, 1, 5, 2};
         int[] out = Arrays.copyOf(in, in.length + 1);
         int pos = 2;
@@ -18,8 +23,8 @@ public class InsertarArray {
         out[pos] = e;
 
         System.out.println("Tras añadir el elemento: ");
-        System.out.println(Arrays.toString(out));
 
+        return out;
     }
 
 
