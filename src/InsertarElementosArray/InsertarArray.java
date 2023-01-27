@@ -4,15 +4,16 @@ import java.util.Arrays;
 
 public class InsertarArray {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(annadirAlArray()));
+        int[] in = {7, 1, 5, 2};
+        int pos = 2;
+        int e = 8;
+        System.out.println(Arrays.toString(annadirAlArray(in, pos, e)));
 
     }
 
-    public static int[] annadirAlArray(){
-        int[] in = {7, 1, 5, 2};
+    public static int[] annadirAlArray(int[]in, int pos, int e){
         int[] out = Arrays.copyOf(in, in.length + 1);
-        int pos = 2;
-        int e = 8;
+
 
         System.out.println("Antes de añadir el elemento: ");
         System.out.println(Arrays.toString(out));
