@@ -5,6 +5,7 @@ import java.util.Random;
 
 public class OperacionesConArrays {
     public static void main(String[] args) {
+
         //1.-Crea un array con 10 números aleatorios
         int [] a = new int [10];
         int [] b = new int [10];
@@ -12,14 +13,17 @@ public class OperacionesConArrays {
         arrayRandom(a);
         System.out.println(Arrays.toString(a));
 
+
         //2.-Imprime el array anterior empezando por la última posición
         System.out.println("--Apartado 2");
         arraUltimo(a);
+
 
         //3.-Ordena el array utilizando la clase de utilidades Arrays
         System.out.println("--Apartado 3");
         Arrays.sort(a);
         System.out.println("Array ordenado " + Arrays.toString(a));
+
 
         //4.-Busca un número recibido como parámetro dentro del array. Por dos métodos diferentes:
             //De manera manual
@@ -30,12 +34,29 @@ public class OperacionesConArrays {
         System.out.println("Utilidades: ");
         System.out.println(Arrays.binarySearch(a, 20));
 
+
         //5.-Compara dos arrays recibidos por parámetros devolviendo si son iguales o no.
         System.out.println("--Apartado 5");
         System.out.println(Arrays.equals(a, b));
 
+
         //6.-Realiza 4 copias del array en un nuevo array de 4 posiciones.
         System.out.println("--Apartado 6");
+            //Utilizando Arrays.clone
+        int [] c = a.clone();
+        System.out.println("Utilizando Arrays.clone " + Arrays.toString(c));
+            //Utilizando Arrays.copyOf
+        int [] d = Arrays.copyOf(a, a.length);
+        System.out.println("Utilizando Arrays.copyOf " + Arrays.toString(d));
+            //Utilizando Arrays.copyOfRange
+        int [] e = Arrays.copyOfRange(a, 0, a.length);
+        System.out.println("Utilizando Arrays.copyOfRange " + Arrays.toString(e));
+            //Utilizando System.arraycopy
+        int [] f = new int[a.length];
+        System.arraycopy(a, 0, f, 0, f.length);
+        System.out.println("Utilizando System.arraycopy " + Arrays.toString(f));
+
+        //TODO array de 4 posiciones
 
     }
 
@@ -73,6 +94,6 @@ public class OperacionesConArrays {
                 return i;
             }
         }
-        return -1;
+        return - 1;
     }
 }
