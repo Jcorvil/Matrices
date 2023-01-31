@@ -1,11 +1,14 @@
 package ArrayStrings.EjercicioArrayStrings;
 
+import java.util.Arrays;
+
 public class EjercicioArrayStrings {
     public static void main(String[] args) {
 
         imprimeLongitudCadena("Hola que tal");
         caracterEnLaPosicion("Hola que tal", 3);
         cuentaOcurrenciasDeUnCaracter("Hola que tal", 'a');
+        cadenaCodificada("En un lugar de la Mancha, de cuyo nombre no me quiero acordar...");
 
 
 
@@ -23,7 +26,7 @@ public class EjercicioArrayStrings {
 
     //Dada una cadena y una posición, decir qué caracter se encuentra en esa posición
     public static void caracterEnLaPosicion(String cadena, int posicion){
-        System.out.println("El caracter número " + (posicion + 1) + " de la cadena " + "'" + cadena + "'" + " es el caracter: " + cadena.charAt(posicion));
+        System.out.println("El caracter número " + (posicion) + " de la cadena " + "'" + cadena + "'" + " es el caracter: " + cadena.charAt(posicion - 1));
     }
 
 
@@ -35,6 +38,7 @@ public class EjercicioArrayStrings {
                 ocurrencias = ocurrencias + 1;
             }
         }
+
         if (ocurrencias == 0){
             System.out.println("El caracter " + "'" +  caracter + "'" + " no aparece en la cadena.");
         }
@@ -48,18 +52,45 @@ public class EjercicioArrayStrings {
 
 
     //Imprime, por orden alfabético, las cadenas dadas por un array de cadenas, sin tener en cuenta mayúsculas y minúsculas
-    public static void imprimeCadenasEnOrdenAlfabetico  (String cadena1, String cadena2, String cadena3, String cadena4){
-        String [] arrayCadenas = {cadena1, cadena2, cadena3, cadena4};
+    public static void imprimeCadenasEnOrdenAlfabetico  (){
 
     }
 
 
-    //Dado un pequeño texto, separarlo por puntos (.). Las secciones entre cada punto se almacenarán en una posición de array distinta.
-    //Ej.: "En un lugar.de la Mancha de.cuyo nombre no.quiero acordarme"
-    //En un lugar -> posición [0]
-    //de la Mancha de-> posición [1]
-    //cuyo nombre no -> posición [2]
-    //quiero acordarme -> posición [3]
+    //Un método que dado un pequeño texto devuelva un array de cadenas codificando el texto, de modo que:
+    // - todas las vocales se sustituyan por un número: o --> 0, i --> 1, a --> 4, e --> 3, salvo la u que se cambia por v.
+    // - cada vez que aparezca el caracter punto (.) se corte esa frase y se meta en una posición del array.
+    // - la frase que se mete en cada posición del array tiene que estar sin espacios al principio ni al final.
+    public static void cadenaCodificada (String cadena){
+
+        char [] cadenaCaracteres = cadena.toCharArray();
+
+        System.out.println("Antes de la codificación:");
+        System.out.println(cadena);
+        System.out.println("Tras la codificación:");
+
+
+        for (int i = 0; i < cadenaCaracteres.length; i++) {
+            if (cadenaCaracteres[i] == 'a'){
+                cadenaCaracteres[i] = '4';
+
+            }if (cadenaCaracteres[i] == 'e'){
+                cadenaCaracteres[i] = '3';
+
+            }if (cadenaCaracteres[i] == 'i'){
+                cadenaCaracteres[i] = '1';
+
+            }if (cadenaCaracteres[i] == 'o'){
+                cadenaCaracteres[i] = '0';
+
+            }if (cadenaCaracteres[i] == 'u'){
+                cadenaCaracteres[i] = 'v';
+            }
+        }
+
+        System.out.println(Arrays.toString(cadenaCaracteres));
+    }
+
 
 
 
