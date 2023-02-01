@@ -7,15 +7,12 @@ public class EjercicioArrayStrings {
 
         imprimeLongitudCadena("Hola que tal");
         caracterEnLaPosicion("Hola que tal", 3);
-        cuentaOcurrenciasDeUnCaracter("Hola que tal", 'a');
+        System.out.println("El caracter aparece " + cuentaOcurrenciasDeUnCaracter("Hola que tal", 'a') + " veces");
         imprimeCadenasEnOrdenAlfabetico(new String[]{"Hola", "Jorge", "Adios"});
         cadenaCodificada("En un lugar de la Mancha, de cuyo nombre no me quiero acordar...");
 
 
-
         //posicionCaracterCadena("Hola que tal", 'a');
-
-
     }
 
     //Imprime la longitud de la cadena.
@@ -32,19 +29,23 @@ public class EjercicioArrayStrings {
 
 
     //Dada una cadena, contar cuantas veces aparece un caracter. "Hola que tal", a -> 2
-    public static void cuentaOcurrenciasDeUnCaracter (String cadena, char caracter){
+    public static int cuentaOcurrenciasDeUnCaracter (String cadena, char caracter){
         int ocurrencias = 0;
         for (int i = 0; i < cadena.length(); i++) {
             if (cadena.charAt(i) == caracter){
                 ocurrencias = ocurrencias + 1;
             }
         }
+        return ocurrencias;
+
+        /*
         if (ocurrencias == 1){
             System.out.println("El caracter " + "'" + caracter + "'" + " en la cadena " + "'" + cadena + "'" + " aparece " + ocurrencias + " vez.");
         }
         if (ocurrencias >= 2 || ocurrencias == 0){
             System.out.println("El caracter " + "'" + caracter + "'" + " en la cadena " + "'" + cadena + "'" + " aparece " + ocurrencias + " veces.");
         }
+        */
     }
 
 
