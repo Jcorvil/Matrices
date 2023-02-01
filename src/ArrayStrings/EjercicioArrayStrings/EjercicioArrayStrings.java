@@ -8,6 +8,7 @@ public class EjercicioArrayStrings {
         imprimeLongitudCadena("Hola que tal");
         caracterEnLaPosicion("Hola que tal", 3);
         cuentaOcurrenciasDeUnCaracter("Hola que tal", 'a');
+        imprimeCadenasEnOrdenAlfabetico(new String[]{"Hola", "Jorge", "Adios"});
         cadenaCodificada("En un lugar de la Mancha, de cuyo nombre no me quiero acordar...");
 
 
@@ -38,22 +39,21 @@ public class EjercicioArrayStrings {
                 ocurrencias = ocurrencias + 1;
             }
         }
-
-        if (ocurrencias == 0){
-            System.out.println("El caracter " + "'" +  caracter + "'" + " no aparece en la cadena.");
-        }
         if (ocurrencias == 1){
             System.out.println("El caracter " + "'" + caracter + "'" + " en la cadena " + "'" + cadena + "'" + " aparece " + ocurrencias + " vez.");
         }
-        if (ocurrencias >= 2){
+        if (ocurrencias >= 2 || ocurrencias == 0){
             System.out.println("El caracter " + "'" + caracter + "'" + " en la cadena " + "'" + cadena + "'" + " aparece " + ocurrencias + " veces.");
         }
     }
 
 
     //Imprime, por orden alfabético, las cadenas dadas por un array de cadenas, sin tener en cuenta mayúsculas y minúsculas
-    public static void imprimeCadenasEnOrdenAlfabetico  (){
-
+    public static void imprimeCadenasEnOrdenAlfabetico (String [] cadenaArray){
+        Arrays.sort(cadenaArray);
+        for (int i = 0; i < cadenaArray.length; i++) {
+            System.out.println(cadenaArray[i] + " ");
+        }
     }
 
 
