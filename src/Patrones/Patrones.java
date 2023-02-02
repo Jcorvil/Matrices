@@ -20,6 +20,6 @@ public class Patrones {
         //Separa todos los caracteres.
         System.out.println(Arrays.toString("Hola me llamo Jorge que tal".split("")));
 
-        
+
     }
 }
