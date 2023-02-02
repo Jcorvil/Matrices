@@ -21,7 +21,7 @@ public class Conversiones {
         Double doble = Double.valueOf("1.123456789");
         System.out.println(integer + doble);
 
-        //Para hacer lo contrario, convertir un numero a una cadena:
+        //Para hacer lo contrario, convertir un entero a una cadena:
         String s = 1 + "";
         s = String.valueOf(1);
         integer.toString();
@@ -30,14 +30,14 @@ public class Conversiones {
 
 
         int num1 = 1;
-        //TODO: numero entero envoltorio de nombre "num2" y valor 2.
+        //numero entero envoltorio de nombre "num2" y valor 2.
         Integer num2 = 2;
 
-        //TODO: imprimir valor de cadena de num1.
+        //imprimir valor de cadena de num1.
         System.out.println(num1 + "");
         System.out.println(String.valueOf(num1));
 
-        //TODO: Imprimir valor tipo cadena de num2. Todos hacen lo mismo.
+        //Imprimir valor tipo cadena de num2. Todos hacen lo mismo.
         System.out.println(num2 + "");
         System.out.println(String.valueOf(num2));
         System.out.println(Integer.toString(num2));

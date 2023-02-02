@@ -4,12 +4,16 @@ import java.util.Arrays;
 
 public class EjercicioArrayStrings {
     public static void main(String[] args) {
-
+/*
         imprimeLongitudCadena("Hola que tal");
         caracterEnLaPosicion("Hola que tal", 3);
         System.out.println("El caracter aparece " + cuentaOcurrenciasDeUnCaracter("Hola que tal", 'a') + " veces");
         imprimeCadenasEnOrdenAlfabetico(new String[]{"Hola", "Jorge", "Adios"});
         cadenaCodificada("En un lugar de la Mancha, de cuyo nombre no me quiero acordar...");
+
+ */
+        int[] numbers = {2,1,11,10};
+        System.out.println(Arrays.toString(convertiraStringOrdenar(numbers)));
 
 
         //posicionCaracterCadena("Hola que tal", 'a');
@@ -93,6 +97,22 @@ public class EjercicioArrayStrings {
     }
 
 
+
+    //Convertir los siguientes números a String y posteriormente ordenarlos alfabéticamente de menor a mayor
+    public static String[] convertiraStringOrdenar (int[] numbers) {
+        String [] numbersString = new String[numbers.length];
+
+        //Este 'for' va a realizar una conversión de 'int' a 'string'.
+        //Cada iteración va a recorrer el array introducido. Cuando el valor de 'i' es igual al valor de la posición del array
+        //va a realizar el 'String.valueOf' y lo va a convertir en una cadena.
+        for (int i = 0; i < numbers.length; i++) {
+            numbersString[i] = String.valueOf(numbers[i]);
+        }
+
+        Arrays.sort(numbersString);
+
+        return numbersString;
+    }
 
 
     //
