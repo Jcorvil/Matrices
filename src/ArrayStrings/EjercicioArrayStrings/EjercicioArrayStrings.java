@@ -4,14 +4,12 @@ import java.util.Arrays;
 
 public class EjercicioArrayStrings {
     public static void main(String[] args) {
-/*
+
         imprimeLongitudCadena("Hola que tal");
         caracterEnLaPosicion("Hola que tal", 3);
         System.out.println("El caracter aparece " + cuentaOcurrenciasDeUnCaracter("Hola que tal", 'a') + " veces");
         imprimeCadenasEnOrdenAlfabetico(new String[]{"Hola", "Jorge", "Adios"});
-        cadenaCodificada("En un lugar de la Mancha, de cuyo nombre no me quiero acordar...");
-
- */
+        cadenaCodificada("En un lugar. de la Mancha,. de cuyo nombre no. me quiero acordar");
         int[] numbers = {2,1,11,10};
         System.out.println(Arrays.toString(convertiraStringOrdenar(numbers)));
 
@@ -68,32 +66,16 @@ public class EjercicioArrayStrings {
     // - la frase que se mete en cada posición del array tiene que estar sin espacios al principio ni al final.
     public static void cadenaCodificada (String cadena){
 
-        char [] cadenaCaracteres = cadena.toCharArray();
-
         System.out.println("Antes de la codificación:");
         System.out.println(cadena);
         System.out.println("Tras la codificación:");
 
+        String cadenaVocales = cadena.replaceAll("a",  "4").replaceAll("e", "3").replaceAll("i", "1").replaceAll("o", "0").replaceAll("u", "V");
 
-        for (int i = 0; i < cadenaCaracteres.length; i++) {
-            if (cadenaCaracteres[i] == 'a'){
-                cadenaCaracteres[i] = '4';
+        String [] arrayCadena = cadenaVocales.split("\\.");
 
-            }if (cadenaCaracteres[i] == 'e'){
-                cadenaCaracteres[i] = '3';
+        System.out.println(Arrays.toString(arrayCadena).trim());
 
-            }if (cadenaCaracteres[i] == 'i'){
-                cadenaCaracteres[i] = '1';
-
-            }if (cadenaCaracteres[i] == 'o'){
-                cadenaCaracteres[i] = '0';
-
-            }if (cadenaCaracteres[i] == 'u'){
-                cadenaCaracteres[i] = 'v';
-            }
-        }
-
-        System.out.println(Arrays.toString(cadenaCaracteres));
     }
 
 
