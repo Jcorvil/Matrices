@@ -109,6 +109,9 @@ public class EjercicioArrayStrings {
             numbersString[i] = String.valueOf(numbers[i]);
         }
 
+        //Va a ordenar las cadenas del array anterior por orden alfabético.
+        //Va a imprimir [1, 10, 11, 2], porque primero ordena todas las cadenas que empiecen por 1, sin importar la longitud,
+        //luego todas las cadenas que empiecen por 2, etc.
         Arrays.sort(numbersString);
 
         return numbersString;
