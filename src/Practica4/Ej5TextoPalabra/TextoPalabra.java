@@ -7,12 +7,7 @@ package Practica4.Ej5TextoPalabra;
 public class TextoPalabra {
     public static void main(String[] args) {
         //crear un texto
-        String texto = "No comas ajos ni cebollas, porque no saquen por el olor tu villanería." +
-                " Anda despacio; habla con resposo; pero no de manera que parezca que te escuchas a ti mismo; que " +
-                "toda afectación es mala. Come poco y cena más poco; que la salud de todo el cuerpo se fragua en la " +
-                "oficina del estómago. Sé templado en el beber, considerando que el vino demasiado ni guarda " +
-                "secreto, ni cumple palabra. Ten cuenta, Sancho, de no mascar a dos carrillos, ni de erutar " +
-                "delante de nadie";
+        String texto = "No comas ajos ni cebollas, porque no saquen por el olor tu villanería. Anda despacio; habla con resposo; pero no de manera que parezca que te escuchas a ti mismo; que toda afectación es mala. Come poco y cena más poco; que la salud de todo el cuerpo se fragua en la oficina del estómago. Sé templado en el beber, considerando que el vino demasiado ni guarda secreto, ni cumple palabra. Ten cuenta, Sancho, de no mascar a dos carrillos, ni de erutar delante de nadie";
         //crear una palabra
         String palabra  = "poco";
 

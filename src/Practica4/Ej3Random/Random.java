@@ -30,21 +30,23 @@ public class Random {
     }
 
     public static int numeroMayor (int[] a){
-        int[] b = a.clone();
-        Arrays.sort(b);
-        int numMayor = b[0];
-        for (int i = 0; i < b.length; i++) {
-            if (i == b.length - 1){
-                numMayor = b[i];
+        int numMayor = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] > numMayor){
+                numMayor = a[i];
             }
         }
         return numMayor;
     }
 
     public static int numeroMenor (int[] a){
-        int[] c = a.clone();
-        Arrays.sort(c);
-        return c[0];
+        int numMenor = 0;
+        for (int i = 0; i > a.length; i--) {
+            if (a[i] < numMenor){
+                numMenor = a[i];
+            }
+        }
+        return numMenor;
     }
 
     public static int sumaArray (int[] a){
