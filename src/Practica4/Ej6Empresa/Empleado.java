@@ -8,11 +8,12 @@ public class Empleado {
     String segundoApellido;
     Integer annoNacimiento;
     Boolean reduccionJornada;
+    String departamento;
 
     Empleado(){}
 
     Empleado(String codigoEmpleado, String DNI, String nombre, String primerApellido, String segundoApellido,
-             Integer annoNacimiento, Boolean reduccionJornada){
+             Integer annoNacimiento, Boolean reduccionJornada, String departamento){
         this.codigoEmpleado = codigoEmpleado;
         this.DNI = DNI;
         this.nombre = nombre;
@@ -20,6 +21,7 @@ public class Empleado {
         this.segundoApellido = segundoApellido;
         this.annoNacimiento = annoNacimiento;
         this.reduccionJornada = reduccionJornada;
+        this.departamento = departamento;
     }
 
 
@@ -33,6 +35,7 @@ public class Empleado {
                 ", Segundo Apellido=' " + segundoApellido + '\'' +
                 ", Año de Nacimiento= " + annoNacimiento +
                 ", Reducción de jornada= " + reduccionJornada +
+                ", Departamento= " + departamento +
                 '}';
     }
 }

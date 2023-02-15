@@ -6,7 +6,6 @@ import java.util.regex.Pattern;
 
 public class Patrones {
     public static void main(String[] args) {
-
         //"Pattern.compile" va a buscar todos los patrones que concuerden con el filtro que se le da.
         //"^Pa.*" Le dice que busque cualquier patrón que empiece por "Pa". El punto significa "cualquier caracter" y
         //el '*' significa que se repita ese último caracter (por eso hace falta el '.'). Si fuera "Pa*" solo buscaría las

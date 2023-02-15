@@ -22,13 +22,13 @@ public class Empresa {
         Sede sede4 = new Sede("Oviedo", "Ventas", "RR.HH.", "Producción");
 
         Empleado empleado1 = new Empleado("ABC123456", "20067600P", "Jorge",
-                "Coronil", "Villalba", 1997, false);
+                "Coronil", "Villalba", 1997, false, "Ventas");
 
         Empleado empleado2 = new Empleado("GHA457894", "19984723A", "Maria",
-                "Olmedo", "Vallés", 1981, false);
+                "Olmedo", "Vallés", 1981, false, "RR.HH.");
 
         Empleado empleado3 = new Empleado("YWX778412", "20012344X", "Manuel",
-                "Flores", "Benitez", 1974, true);
+                "Flores", "Benitez", 1974, true, "Producción");
 
 
         Sede[] sedes = {sede1, sede2, sede3, sede4};
